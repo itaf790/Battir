@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Battir Tour Guide App</string>
+    <string name="app_name">Battir Tour Guide</string>
+
+    <string name="Hotels">Hotels</string>
+    <string name="Arch">Archaeological Areas</string>
+    <string name="Resturants">Restaurants</string>
+    <string name="tourist">Tourist Areas</string>
 </resources>
