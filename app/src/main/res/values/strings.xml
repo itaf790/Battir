@@ -5,4 +5,5 @@
     <string name="Arch">Archaeological Areas</string>
     <string name="Resturants">Restaurants</string>
     <string name="tourist">Tourist Areas</string>
+    <string name="tourist_areas">Tourist Areas</string>
 </resources>

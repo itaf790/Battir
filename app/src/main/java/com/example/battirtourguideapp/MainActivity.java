@@ -19,10 +19,10 @@ import com.synnapps.carouselview.ImageListener;
 
 
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity{
 
 
-    implements BottomNavigationView.OnNavigationItemSelectedListener {
+   // implements BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
 
 
@@ -110,44 +110,43 @@ arch.setOnClickListener(new View.OnClickListener() {
 
 
         //ll navigation
-        bottomNavigationView = findViewById(R.id.nav_view);
-        setListeners();
+     //   bottomNavigationView = findViewById(R.id.nav_view);
+      //  setListeners();
 
     }
 
-    private void setListeners() {
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+  //  private void setListeners() {
+      //  bottomNavigationView.setOnNavigationItemSelectedListener(this);
+    }//
+//
+   // @Override
+   // public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
 
         //If item is Checked make it unchecked
-        if (item.isChecked())
-            item.setChecked(false);
-        switch (item.getItemId()) {
-            case R.id.navigation_home:
+      //  if (item.isChecked())
+          //  item.setChecked(false);
+        //switch (item.getItemId()) {
+           // case R.id.navigation_home:
                 //Check the Item
 
-                item.setChecked(true);
-                break;
-            case R.id.navigation_qr:
+              ////  item.setChecked(true);
+              //  break;
+         //   ca//se R.id.navigation_qr:
                 //Check the Item
 
-                item.setChecked(true);
-                break;
-            case R.id.navigation_map:
-                //Check the Item
+             //   item.setChecked(true);
+             ////   break;
+          //  case R.id.navigation_map:
+           //     //Check the Item
 
-                item.setChecked(true);
-                break;
-        }
-        return true;
-    }
-
+              //  item.setChecked(true);
+             //   break;
+      //  }
+      //  return true;
 
 
 
-    }
+
+
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui" >
+    tools:context=".MainActivity" >
 
 
     <TableRow
@@ -13,7 +13,7 @@
 
         <com.synnapps.carouselview.CarouselView
             android:id="@+id/carouselView"
-            android:layout_width="match_parent"
+            android:layout_width="427dp"
             android:layout_height="200dp"
             app:fillColor="#FFFFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,18 +38,21 @@
             android:layout_width="173dp"
             android:layout_height="125dp"
 
-            android:background="@drawable/sya1"
-            />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/sya1" />
 
         <Button
             android:id="@+id/rest1"
-            android:layout_width="173dp"
+            android:layout_width="215dp"
             android:layout_height="125dp"
 
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:background="@drawable/rest1"
-             />
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rest1" />
     </TableRow>
 
 
@@ -61,8 +64,8 @@
             android:id="@+id/text_tourist"
             android:layout_width="131dp"
             android:layout_height="32dp"
-            android:layout_marginBottom="0dp"
-            android:text="Tourist Areas"
+            android:layout_marginBottom="30dp"
+            android:text="@string/tourist_areas"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -70,7 +73,7 @@
             android:id="@+id/text_rest"
             android:layout_width="91dp"
             android:layout_height="39dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="30dp"
             android:text="Resturants"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -86,24 +89,27 @@
             android:id="@+id/arch"
             android:layout_width="173dp"
             android:layout_height="125dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/ath1"
-            android:visibility="visible"
-            />
+            android:visibility="visible" />
 
         <Button
             android:id="@+id/hotel1"
-            android:layout_width="173dp"
+            android:layout_width="199dp"
             android:layout_height="125dp"
 
-            android:background="@drawable/hotel1"
-           />
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/hotel1" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextV000iew
+        <TextView
             android:id="@+id/text_arch"
             android:layout_width="190dp"
             android:layout_height="30dp"
@@ -120,8 +126,7 @@
             android:layout_marginBottom="96dp"
             android:text="Hotels"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </TableRow>
     <TableRow
         android:layout_width="match_parent"
@@ -130,4 +135,4 @@
 
 </TableLayout>
 
-=
+
