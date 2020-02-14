@@ -23,16 +23,16 @@
         app:strokeWidth="1dp"
         tools:ignore="MissingConstraints" />
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="#E9DDDD"
 
+        android:background="#E9DDDD"
         android:textSize="@dimen/design_bottom_navigation_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
@@ -40,58 +40,29 @@
 
     <Button
         android:id="@+id/tourist"
-        android:layout_width="119dp"
-        android:layout_height="122dp"
-        android:layout_marginStart="28dp"
+        android:layout_width="173dp"
+        android:layout_height="125dp"
 
-        android:layout_marginLeft="28dp"
         android:background="@drawable/sya1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/hotel"
-        app:layout_constraintHorizontal_bias="0.254"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
-
-    <Button
-        android:id="@+id/hotel"
-        android:layout_width="119dp"
-        android:layout_height="122dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/hotel1"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
         android:id="@+id/arch"
-        android:layout_width="119dp"
-        android:layout_height="122dp"
+        android:layout_width="173dp"
+        android:layout_height="125dp"
         android:background="@drawable/ath1"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
-
-    <Button
-        android:id="@+id/rest"
-        android:layout_width="119dp"
-        android:layout_height="122dp"
-        android:layout_marginStart="236dp"
-        android:layout_marginLeft="236dp"
-        android:background="@drawable/rest1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintVertical_bias="0.77" />
 
     <TextView
         android:id="@+id/text_tourist"
@@ -102,54 +73,85 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/arch"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tourist"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.441" />
 
     <TextView
         android:id="@+id/text_hotel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="96dp"
         android:text="Hotels"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rest"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hotel"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintTop_toTopOf="@+id/text_rest"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/text_arch"
-        android:layout_width="226dp"
-        android:layout_height="29dp"
+        android:layout_width="190dp"
+        android:layout_height="30dp"
         android:text="Archaeological Areas"
         android:textSize="18sp"
         android:textStyle="bold"
         app:autoSizeTextType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/text_rest"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/arch"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <TextView
         android:id="@+id/text_rest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="91dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="284dp"
         android:text="Resturants"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rest"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintTop_toBottomOf="@+id/rest1"
+        app:layout_constraintVertical_bias="0.666" />
 
+    <Button
+        android:id="@+id/hotel1"
+        android:layout_width="173dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="196dp"
+
+        android:layout_marginLeft="196dp"
+        android:background="@drawable/hotel1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
+
+    <Button
+        android:id="@+id/rest1"
+        android:layout_width="173dp"
+        android:layout_height="125dp"
+
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/rest1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

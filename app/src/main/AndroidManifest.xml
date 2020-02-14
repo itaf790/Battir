@@ -9,16 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".hotel"
-            android:label="@string/Hotels" ></activity>
-
-        <activity android:name=".rest"
+        <activity android:name=".ui_activity"></activity>
+        <activity
+            android:name=".hotel"
+            android:label="@string/Hotels" />
+        <activity
+            android:name=".rest"
             android:label="@string/Resturants" />
-
-        <activity android:name=".tourist"
+        <activity
+            android:name=".tourist"
             android:label="@string/tourist" />
-
-        <activity android:name=".arch"
+        <activity
+            android:name=".arch"
             android:label="@string/Arch" />
         <activity android:name=".MainActivity">
             <intent-filter>

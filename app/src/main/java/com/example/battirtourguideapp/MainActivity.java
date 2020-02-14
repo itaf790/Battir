@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
     private int[] mImages = new int[] {
             R.drawable.img1 ,
             R.drawable.img2 ,
-            R.drawable.img3 ,
+            R.drawable.img3,
             R.drawable.img4 ,
     };
     private String[] mImagesTitle = new String[] {
@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity
         // button OnClich
         Button arch = (Button) findViewById(R.id.arch);
         Button torist =(Button) findViewById(R.id.tourist);
-        Button hotel =(Button) findViewById(R.id.hotel);
-        Button rest =(Button) findViewById(R.id.rest);
+        Button hotel =(Button) findViewById(R.id.hotel1);
+        Button rest =(Button) findViewById(R.id.rest1);
 
 arch.setOnClickListener(new View.OnClickListener() {
     @Override
