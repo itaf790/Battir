@@ -19,134 +19,157 @@ import com.synnapps.carouselview.ImageListener;
 
 
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
 
-   // implements BottomNavigationView.OnNavigationItemSelectedListener {
+    // implements BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
 
 
     // hay ll slideshow
-    private int[] mImages = new int[] {
-            R.drawable.img1 ,
-            R.drawable.img2 ,
+    private int[] mImages = new int[]{
+            R.drawable.img1,
+            R.drawable.img2,
             R.drawable.img3,
-            R.drawable.img4 ,
+            R.drawable.img4,
     };
-    private String[] mImagesTitle = new String[] {
+    private String[] mImagesTitle = new String[]{
 
             // eza bde aktoub 3l soar hun
     };
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate (savedInstanceState);
+        setContentView (R.layout.activity_main);
 
 
         // button OnClich
-        Button arch = (Button) findViewById(R.id.arch);
-        Button torist =(Button) findViewById(R.id.tourist);
-        Button hotel =(Button) findViewById(R.id.hotel1);
-        Button rest =(Button) findViewById(R.id.rest1);
+        Button arch = (Button) findViewById (R.id.arch);
+        Button torist = (Button) findViewById (R.id.tourist);
+        Button hotel = (Button) findViewById (R.id.hotel1);
+        Button rest = (Button) findViewById (R.id.rest1);
 
-arch.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent int1 = new Intent(MainActivity.this,arch.class);
-        startActivity(int1);
-    }
-});
-
-        hotel.setOnClickListener(new View.OnClickListener() {
+        arch.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                Intent int2 = new Intent(MainActivity.this,hotel.class);
-                startActivity(int2);
+                Intent int1 = new Intent (MainActivity.this, arch.class);
+                startActivity (int1);
+            }
+        });
+
+        hotel.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View v) {
+                Intent int2 = new Intent (MainActivity.this, hotel.class);
+                startActivity (int2);
             }
         });
 
 
-        rest.setOnClickListener(new View.OnClickListener() {
+        rest.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                Intent int3 = new Intent(MainActivity.this,rest.class);
-                startActivity(int3);
+                Intent int3 = new Intent (MainActivity.this, rest.class);
+                startActivity (int3);
             }
         });
 
-        torist.setOnClickListener(new View.OnClickListener() {
+        torist.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {
-                Intent int4 = new Intent(MainActivity.this,tourist.class);
-                startActivity(int4);
+                Intent int4 = new Intent (MainActivity.this, tourist.class);
+                startActivity (int4);
             }
         });
 
 
 //had ll slideshow
-        CarouselView carouselView = findViewById(R.id.carouselView);
-        carouselView.setPageCount(mImages.length);
-        carouselView.setImageListener(new ImageListener() {
+        CarouselView carouselView = findViewById (R.id.carouselView);
+        carouselView.setPageCount (mImages.length);
+        carouselView.setImageListener (new ImageListener () {
             @Override
             public void setImageForPosition(int position, ImageView imageView) {
-                imageView.setImageResource(mImages[position]);
+                imageView.setImageResource (mImages[position]);
 
             }
         });
-        carouselView.setImageClickListener(new ImageClickListener() {
+        carouselView.setImageClickListener (new ImageClickListener () {
             @Override
             public void onClick(int position) {
-                Toast.makeText(MainActivity.this, mImagesTitle[position], Toast.LENGTH_SHORT).show();
+                Toast.makeText (MainActivity.this, mImagesTitle[position], Toast.LENGTH_SHORT).show ();
             }
         });
 
-
-
-
-
-
+    }
+}
         //ll navigation
-     //   bottomNavigationView = findViewById(R.id.nav_view);
-      //  setListeners();
+
+      /* <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:
+        id = "@+id/nav_view"
+        android:
+        layout_width = "match_parent"
+        android:
+        layout_height = "wrap_content"
+        android:
+        layout_marginStart = "0dp"
+        android:
+        layout_marginEnd = "0dp"
+        android:
+        background = "#E9DDDD"
+
+        android:
+        textSize = "@dimen/design_bottom_navigation_text_size"
+        app:
+        layout_constraintBottom_toBottomOf = "parent"
+        app:
+        layout_constraintLeft_toLeftOf = "parent"
+        app:
+        layout_constraintRight_toRightOf = "parent"
+        app:
+        menu = "@menu/bottom_nav_menu" / >
+
+
+                bottomNavigationView = findViewById (R.id.nav_view);
+        setListeners ();
 
     }
 
-  //  private void setListeners() {
-      //  bottomNavigationView.setOnNavigationItemSelectedListener(this);
-    }//
-//
-   // @Override
-   // public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    private void setListeners() {
+        bottomNavigationView.setOnNavigationItemSelectedListener (this);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
 
-        //If item is Checked make it unchecked
-      //  if (item.isChecked())
-          //  item.setChecked(false);
-        //switch (item.getItemId()) {
-           // case R.id.navigation_home:
-                //Check the Item
+        If item is Checked make it unchecked
+        if (item.isChecked ())
+            item.setChecked (false);
+        switch (item.getItemId ()) {
+            case R.id.navigation_home:
+                Check the Item
 
-              ////  item.setChecked(true);
-              //  break;
-         //   ca//se R.id.navigation_qr:
-                //Check the Item
+                item.setChecked (true);
+                break;
+            case R.id.navigation_qr:
+                Check the Item
 
-             //   item.setChecked(true);
-             ////   break;
-          //  case R.id.navigation_map:
-           //     //Check the Item
+                item.setChecked (true);
+                break;
+            case R.id.navigation_map:
+                Check the Item
 
-              //  item.setChecked(true);
-             //   break;
-      //  }
-      //  return true;
-
-
+                item.setChecked (true);
+                break;
+        }
+        return true;
 
 
+    }
+}
 
 
+    */
