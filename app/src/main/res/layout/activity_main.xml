@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ECF0EA"
     tools:context=".MainActivity">
 
 
     <com.synnapps.carouselview.CarouselView
         android:id="@+id/carouselView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         app:fillColor="#FFFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +35,8 @@
 
         <Button
             android:id="@+id/tourist"
-            android:layout_width="175dp"
 
+            android:layout_width="160dp"
             android:layout_height="118dp"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="1dp"
@@ -51,7 +52,7 @@
             android:layout_marginLeft="-4dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginRight="-7dp"
+            android:layout_marginRight="30dp"
             android:layout_marginBottom="4dp"
             android:background="@drawable/rest1" />
     </TableRow>
@@ -72,8 +73,12 @@
             android:layout_marginBottom="2dp"
             android:gravity="center_horizontal"
             android:text="@string/tourist_areas"
+            android:textColor="#253D0A"
+            android:textColorHint="@color/vpi__background_holo_dark"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:autoSizeTextType="none"
+            app:fontFamily="serif" />
 
         <TextView
             android:id="@+id/text_rest"
@@ -81,13 +86,14 @@
             android:layout_height="32dp"
             android:layout_marginLeft="1dp"
             android:layout_marginTop="-10dp"
-
+            android:textColor="#253D0A"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="2dp"
             android:gravity="center"
             android:text="Resturants"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:fontFamily="serif" />
     </TableRow>
 
     <TableRow
@@ -99,7 +105,7 @@
 
         <Button
             android:id="@+id/arch"
-            android:layout_width="175dp"
+            android:layout_width="160dp"
             android:layout_height="118dp"
 
             android:layout_marginLeft="2dp"
@@ -114,7 +120,7 @@
             android:layout_width="160dp"
             android:layout_height="118dp"
 
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="-4dp"
             android:layout_marginTop="1dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="4dp"
@@ -136,9 +142,11 @@
             android:layout_marginBottom="2dp"
             android:gravity="center"
             android:text="Archaeological Areas"
+            android:textColor="#253D0A"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:autoSizeTextType="none" />
+            app:autoSizeTextType="none"
+            app:fontFamily="serif" />
 
         <TextView
             android:id="@+id/text_hotel"
@@ -150,8 +158,10 @@
             android:layout_marginBottom="2dp"
             android:gravity="center"
             android:text="Hotels"
+            android:textColor="#253D0A"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:fontFamily="serif" />
 
     </TableRow>
 
@@ -165,16 +175,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="-18dp"
         android:layout_marginEnd="0dp"
 
-        android:background="#F1FFD5"
+        android:background="#E9DDDD"
         android:textSize="@dimen/design_bottom_navigation_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-
 
 
 </TableLayout>
