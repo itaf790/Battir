@@ -120,13 +120,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavig
                     item.setChecked (true);
                     break;
                 case R.id.navigation_map:
-                    // Check the Item
-
-                    item.setChecked (true);
-                    break;
+                    startActivity (new Intent (getApplicationContext (),
+                            MapsActivity.class));
+                    overridePendingTransition (0, 0);
+                    return true;
+                    
             }
-            return true;
+            return false;
         }
+
+
     }
 
 
