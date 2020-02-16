@@ -13,16 +13,20 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".hotel"
-            android:label="@string/Hotels" />
+            android:label="@string/Hotels"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".rest"
-            android:label="@string/Resturants" />
+            android:label="@string/Resturants"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".tourist"
-            android:label="@string/tourist" />
+            android:label="@string/tourist"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".arch"
-            android:label="@string/Arch" />
+            android:label="@string/Arch"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
