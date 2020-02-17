@@ -124,7 +124,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavig
                             MapsActivity.class));
                     overridePendingTransition (0, 0);
                     return true;
-                    
+
             }
             return false;
         }
