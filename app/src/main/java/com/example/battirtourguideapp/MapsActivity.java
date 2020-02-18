@@ -19,7 +19,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_maps);
+        setContentView (R.layout.activity_maps2);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager ()
                 .findFragmentById (R.id.map);
@@ -39,9 +39,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        float zoom=12;
-        LatLng battir = new LatLng (31.729057,35.137903 );
+        LatLng battir = new LatLng (31.729166, 35.137946);
         mMap.addMarker (new MarkerOptions ().position (battir).title ("Marker in battir"));
-        mMap.moveCamera (CameraUpdateFactory.newLatLngZoom (battir,zoom));
+        mMap.moveCamera (CameraUpdateFactory.newLatLngZoom (battir,15));
     }
 }
