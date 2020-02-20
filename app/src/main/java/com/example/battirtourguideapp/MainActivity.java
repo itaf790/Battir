@@ -129,11 +129,23 @@ import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavig
             }
             return false;
         }
-//about
+      /// about
+      @Override
+     public boolean onCreateOptionsMenu(Menu menu) {
+      getMenuInflater().inflate(R.menu.main, menu);
+       return true;
+}
 
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            // Handle presses on the action bar items
+            switch (item.getItemId()) {
+                case R.id.about:
+                    startActivity (new Intent (getApplicationContext (),
+                            About.class));
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
+        }
 
     }
-
-
-
-

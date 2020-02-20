@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -47,11 +48,19 @@
             android:name=".tourist"
             android:label="@string/tourist"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".About"
+            android:label="@string/About"
+            android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".arch"
             android:label="@string/Arch"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
