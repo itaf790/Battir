@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".About">
+    android:padding="5dp"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E9DDDD"
+            android:foregroundGravity="fill_horizontal|left|center_horizontal"
+            android:gravity="clip_horizontal|center|start|right|fill"
+            android:text="   Battir, a Palestinian village located a few kilometers south-west of Jerusalem, is renowned for its rich history and fertile lands. Battir's entrance, lined with luscious palm trees is the perfect portrait of what Battir is all about; the village is surrounded by traditionally irrigated, beautiful terraces, filled with eggplants, vines, peppers and olive trees. Decades ago, the train to Jerusalem used to stop in Battir; next to the railway, where a busy vegetable market used to be, the relics of the Ottoman train station still remain. Although the market no longer exists, the production of vegetables is still flourishing due to its exceptional irrigation system, which is more than 3,000 years old. It is said that the name Battir originates from the Phoenician word (Batara), meaning sever and slash in Arabic. Other narratives refer the name to Beit Al Tair (House of a bird).  In addition Battir has a charming, rural landscape which was recently recognized by UNESCO with the Melina Mercouri International Prize for the Safeguarding and Management of Cultural Landscapes."
+            android:textColor="#516135"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="serif" />
+    </ScrollView>
+
+</RelativeLayout>
