@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "244218583935",
+    "firebase_url": "https://battir-tour-guide-app-edfe8.firebaseio.com",
+    "project_id": "battir-tour-guide-app-edfe8",
+    "storage_bucket": "battir-tour-guide-app-edfe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244218583935:android:e8e2a872381afcff23584a",
+        "android_client_info": {
+          "package_name": "com.example.battirtourguideapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244218583935-go6ej3lt6l1efqvt0os5anrleu5ad3t4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.battirtourguideapp",
+            "certificate_hash": "025a127eb2437ae070d7ffda9408031dcd29e388"
+          }
+        },
+        {
+          "client_id": "244218583935-jq9vj247vnedl1cv8q5nvght1nhn5hln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNkERazstVEz9VCpVIB1ECp__JcXX5wdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244218583935-jq9vj247vnedl1cv8q5nvght1nhn5hln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
