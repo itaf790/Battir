@@ -6,9 +6,9 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backk"
     android:padding="5dp"
-    tools:context=".MainActivity"
-    android:background="#FAF2F2">
+    tools:context=".MainActivity">
 
 
     <ScrollView
