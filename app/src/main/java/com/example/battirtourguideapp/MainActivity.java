@@ -26,27 +26,25 @@ public class MainActivity extends AppCompatActivity
         implements BottomNavigationView.OnNavigationItemSelectedListener {
 
 
-        private BottomNavigationView bottomNavigationView;
+    private BottomNavigationView bottomNavigationView;
 
-        // hay ll slideshow
-        private int[] mImages = new int[]{
-                R.drawable.img1,
-                R.drawable.img2,
-                R.drawable.img3,
-                R.drawable.img4,
-        };
+    // hay ll slideshow
+    private int[] mImages = new int[]{
+            R.drawable.img1,
+            R.drawable.img2,
+            R.drawable.img3,
+            R.drawable.img4,
+    };
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate (savedInstanceState);
-            setContentView (R.layout.activity_main);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate (savedInstanceState);
+        setContentView (R.layout.activity_main);
 
-
-
-
+// splash
 
 
-
+        //startActivity (new Intent (MainActivity.this, splash.class));
 
 
 
