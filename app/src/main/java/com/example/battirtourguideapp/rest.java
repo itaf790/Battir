@@ -1,6 +1,8 @@
 package com.example.battirtourguideapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -26,12 +28,60 @@ import java.util.Map;
 
 public class rest extends AppCompatActivity {
 
+    RecyclerView mRecyclerView;
+    FirebaseDatabase mFirebaseDatabase;
+    DatabaseReference mRef;
+    LinearLayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_rest);
+
+        //RecyclerView
+        mRecyclerView = findViewById (R.id.open_orders_list);
+        mRecyclerView.setHasFixedSize (true);
+//set layout as LinearLayout
+        mRecyclerView.setLayoutManager (mLayoutManager);
+
+        //send Query to FirebaseDatabase
+        mFirebaseDatabase = FirebaseDatabase.getInstance ();
+        mRef = mFirebaseDatabase.getReference ("Data");
+
+
+
     }
+
+    //load data into recycler view onStart
+    @Override
+    protected void onStart() {
+        super.onStart ();
+        FirebaseRecyclerAdapter<Model, ViewHolder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<Model, ViewHolder>(
+                        Model.class,
+                        R.layout.row,
+                        ViewHolder.class,
+                        mRef
+                ) {
+
+
+                    @Override
+                    protected void populateViewHolder(ViewHolder viewHolder, Model model, int position) {
+                        viewHolder.setDetails (getApplicationContext (), model.getname (), model.getImage ());
+                    }
+
+                }
+
+        ;
+
+        mRecyclerView.setAdapter( firebaseRecyclerAdapter);
+
+
+
+
+
+    }
+
 
 
 }
