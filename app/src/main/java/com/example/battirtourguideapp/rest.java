@@ -57,7 +57,7 @@ public class rest extends AppCompatActivity {
     protected void onStart() {
         super.onStart ();
         FirebaseRecyclerAdapter<Model, ViewHolder> firebaseRecyclerAdapter =
-                new FirebaseRecyclerAdapter<Model, ViewHolder>(
+                new FirebaseRecyclerAdapter<Model, ViewHolder> (
                         Model.class,
                         R.layout.row,
                         ViewHolder.class,
@@ -70,24 +70,14 @@ public class rest extends AppCompatActivity {
                         viewHolder.setDetails (getApplicationContext (), model.getname (), model.getImage ());
                     }
 
-                }
+                };
 
-        ;
-
-        mRecyclerView.setAdapter( firebaseRecyclerAdapter);
-
-
-
-
+        mRecyclerView.setAdapter (firebaseRecyclerAdapter);
 
     }
 
+        }
 
-
-}
-
-
-
-
+   
 
 

@@ -1,8 +1,12 @@
 package com.example.battirtourguideapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -38,9 +42,23 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+       mMap = googleMap;
         LatLng battir = new LatLng (31.729166, 35.137946);
         mMap.addMarker (new MarkerOptions ().position (battir).title ("Marker in battir"));
-        mMap.moveCamera (CameraUpdateFactory.newLatLngZoom (battir,15));
+       mMap.moveCamera (CameraUpdateFactory.newLatLngZoom (battir,15));
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
+                buildGoogleApiClient();
+                mMap.setMyLocationEnabled(true);
+            }
+        } else {
+            buildGoogleApiClient();
+            mMap.setMyLocationEnabled(true);
+        }
+    }
+
+    private void buildGoogleApiClient() {
     }
 }
