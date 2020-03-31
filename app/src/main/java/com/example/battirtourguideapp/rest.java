@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,6 +21,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,51 +34,72 @@ public class rest extends AppCompatActivity {
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mRef;
     LinearLayoutManager mLayoutManager;
+    // Creating DatabaseReference.
+    DatabaseReference databaseReference;
+    // Creating StorageReference and DatabaseReference object.
+    StorageReference storageReference;
+
+    // Creating Progress dialog
+    ProgressDialog progressDialog;
+
+    ArrayList<ImageUploadInfo>imagesList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_rest);
 
-        //RecyclerView
-        mRecyclerView = findViewById (R.id.open_orders_list);
-        mRecyclerView.setHasFixedSize (true);
-//set layout as LinearLayout
-        mRecyclerView.setLayoutManager (mLayoutManager);
+// Assign activity this to progress dialog.
+        progressDialog = new ProgressDialog (rest.this);
 
-        //send Query to FirebaseDatabase
-        mFirebaseDatabase = FirebaseDatabase.getInstance ();
-        mRef = mFirebaseDatabase.getReference ("Data");
+        // Setting up message in Progress dialog.
+        progressDialog.setMessage("Loading Images From Firebase.");
 
+        // Showing progress dialog.
+        progressDialog.show();
 
+        // Setting up Firebase image upload folder path in databaseReference.
+        // The path is already defined in MainActivity.
+        databaseReference = FirebaseDatabase.getInstance().getReference(MainActivity.Database_Path);
 
+        imagesList = new ArrayList<ImageUploadInfo>();
+
+        // Adding Add Value Event Listener to databaseReference.
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+
+                for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+
+                    ImageUploadInfo imageUploadInfo = postSnapshot.getValue(ImageUploadInfo.class);
+
+                    imagesList.add(imageUploadInfo);
+                }
+
+                ListView listView = findViewById(R.id.list_view);
+
+                ImagesListAdapter adapter =
+                        new ImagesListAdapter(getApplicationContext(), R.layout.adapter_view_layout, imagesList);
+                listView.setAdapter(adapter);
+
+                // Hiding the progress dialog.
+                progressDialog.dismiss();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+                // Hiding the progress dialog.
+                progressDialog.dismiss();
+
+            }
+        });
+    }
     }
 
-    //load data into recycler view onStart
-    @Override
-    protected void onStart() {
-        super.onStart ();
-        FirebaseRecyclerAdapter<Model, ViewHolder> firebaseRecyclerAdapter =
-                new FirebaseRecyclerAdapter<Model, ViewHolder> (
-                        Model.class,
-                        R.layout.row,
-                        ViewHolder.class,
-                        mRef
-                ) {
 
 
-                    @Override
-                    protected void populateViewHolder(ViewHolder viewHolder, Model model, int position) {
-                        viewHolder.setDetails (getApplicationContext (), model.getname (), model.getImage ());
-                    }
-
-                };
-
-        mRecyclerView.setAdapter (firebaseRecyclerAdapter);
-
-    }
-
-        }
 
    
 

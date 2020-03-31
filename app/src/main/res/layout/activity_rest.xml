@@ -10,8 +10,8 @@
     android:background="#F0EDED"
     android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/open_orders_list"
+    <ListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
