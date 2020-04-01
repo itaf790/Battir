@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ImagesListAdapter extends ArrayAdapter<ImageUploadInfo> {
-    private static final String TAG = "ImageListAdapter";
+    private static final String TAG = "ImagesListAdapter";
     private Context mContext;
     private int mResource;
     public ImagesListAdapter(Context context, int resource, ArrayList<ImageUploadInfo> list) {
