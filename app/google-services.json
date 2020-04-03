@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "244218583935",
-    "firebase_url": "https://battir-tour-guide-app-edfe8.firebaseio.com",
-    "project_id": "battir-tour-guide-app-edfe8",
-    "storage_bucket": "battir-tour-guide-app-edfe8.appspot.com"
+    "project_number": "732308383660",
+    "firebase_url": "https://battirtourguideapp-fb3c3.firebaseio.com",
+    "project_id": "battirtourguideapp-fb3c3",
+    "storage_bucket": "battirtourguideapp-fb3c3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:244218583935:android:e8e2a872381afcff23584a",
+        "mobilesdk_app_id": "1:732308383660:android:4d967b17f26b541e51bc09",
         "android_client_info": {
-          "package_name": "com.example.battirtourguideapp"
+          "package_name": "com.project.battirtourguideapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "244218583935-go6ej3lt6l1efqvt0os5anrleu5ad3t4.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.battirtourguideapp",
-            "certificate_hash": "025a127eb2437ae070d7ffda9408031dcd29e388"
-          }
-        },
-        {
-          "client_id": "244218583935-jq9vj247vnedl1cv8q5nvght1nhn5hln.apps.googleusercontent.com",
+          "client_id": "732308383660-nk88tg7c5ulltph03opi0eliqi2b2u8l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBNkERazstVEz9VCpVIB1ECp__JcXX5wdA"
+          "current_key": "AIzaSyDkKuIaDuDoj4oSn72y1ZQSk9fjh6K0VmE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "244218583935-jq9vj247vnedl1cv8q5nvght1nhn5hln.apps.googleusercontent.com",
+              "client_id": "732308383660-nk88tg7c5ulltph03opi0eliqi2b2u8l.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

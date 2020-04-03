@@ -1,4 +1,4 @@
-package com.example.battirtourguideapp;
+package com.project.battirtourguideapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,13 +1,9 @@
-package com.example.battirtourguideapp;
+package com.project.battirtourguideapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.SystemClock;
-import android.view.Window;
-import android.view.WindowManager;
 
 import java.util.Timer;
 import java.util.TimerTask;

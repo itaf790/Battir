@@ -1,8 +1,7 @@
-package com.example.battirtourguideapp;
+package com.project.battirtourguideapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

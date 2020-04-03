@@ -1,15 +1,14 @@
-package com.example.battirtourguideapp;
+package com.project.battirtourguideapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class resrR1descripion extends AppCompatActivity {
+public class About extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_resr_r1descripion);
-        
+        setContentView (R.layout.activity_about2);
     }
 }

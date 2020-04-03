@@ -1,4 +1,4 @@
-package com.example.battirtourguideapp;
+package com.project.battirtourguideapp;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.battirtourguideapp", appContext.getPackageName());
+        assertEquals("com.com.project.com.project.com.project.project.com.project.com.project.project", appContext.getPackageName());
     }
 }

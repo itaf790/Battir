@@ -1,51 +1,34 @@
-package com.example.battirtourguideapp;
+package com.project.battirtourguideapp;
 
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.Continuation;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener;
-
-import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity
         implements BottomNavigationView.OnNavigationItemSelectedListener {
     // Folder path for Firebase Storage.
-    String Storage_Path = "Uploads/";
+    String Storage_Path = "/";
 
     // Root Database Name for Firebase Database.
-    static String Database_Path = "Project_Database";
+    static String Database_Path = "TourGuide_Database";
     // Creating URI.
     Uri FilePathUri;
 
@@ -81,13 +64,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
 
-
-
         // Assign FirebaseStorage instance to storageReference.
-        storageReference = FirebaseStorage.getInstance().getReference();
+        //storageReference = FirebaseStorage.getInstance().getReference();
 
         // Assign FirebaseDatabase instance with root database name.
-        databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
+        //databaseReference = FirebaseDatabase.getInstance().getReference(Database_Path);
 
 // splash
 
@@ -209,7 +190,7 @@ public class MainActivity extends AppCompatActivity
         }
 
 
-
+        /*
         // list
         @Override
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -328,7 +309,7 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(MainActivity.this,
                     "Please Select Image or Add Image Name", Toast.LENGTH_LONG).show();
         }
-    }
+    }*/
 
         }
 

@@ -1,4 +1,4 @@
-package com.example.battirtourguideapp;
+package com.project.battirtourguideapp;
 
 public class data {
     String name;
