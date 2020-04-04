@@ -5,26 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="100"
-    android:background="#E9DDDD">
+    >
 
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:id="@+id/details_image_View"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
-    <TextView
-        android:id="@+id/details_image_desc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="5"
-        android:gravity="center"
-        android:text="Image Description"
-        android:textAlignment="center"
-        android:textColor="#74A376"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"/>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/details_image_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+        <TextView
+            android:id="@+id/details_image_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Image Description"
+            android:textColor="#253D0A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+
+
+
 </LinearLayout>

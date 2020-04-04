@@ -22,10 +22,11 @@
         android:gravity="center"
         android:text="Description"
         android:textAlignment="center"
-        android:textColor="#933"
+        android:textColor="#253D0A"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="5dp"
+       />
 
 </RelativeLayout>
