@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="100">
+    android:weightSum="100"
+    android:background="#E9DDDD">
 
     <ImageView
         android:layout_marginTop="20dp"
@@ -21,7 +22,7 @@
         android:gravity="center"
         android:text="Image Description"
         android:textAlignment="center"
-        android:textColor="#933"
+        android:textColor="#74A376"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="15dp"
