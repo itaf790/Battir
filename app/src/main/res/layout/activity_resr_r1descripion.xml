@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resrR1descripion">
+    tools:context=".resrR1descripion"
+    android:background="#E9DDDD">
 
     <ImageView
         android:id="@+id/image_View"
@@ -15,6 +16,7 @@
 
 
     <TextView
+
         android:id="@+id/image_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
