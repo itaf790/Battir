@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.project.battirtourguideapp">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -19,10 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ImageDetailsActivity"
-            android:parentActivityName=".resrR1descripion"></activity>
-        <activity android:name=".resrR1descripion"
-            android:parentActivityName=".MainActivity"/>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,15 +31,24 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBuwu8s_Q7RcXWrLjbR180u0qoCPwrKHvk" />
+            android:value="AIzaSyCpsOhVivNGvfR0sNzEkvHPUt67ZU6hdpQ"
+            />
+
+        <activity
+            android:name=".map"
+            android:label="@string/title_activity_map"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ImageDetailsActivity"
+            android:parentActivityName=".resrR1descripion" />
+        <activity
+            android:name=".resrR1descripion"
+            android:parentActivityName=".MainActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"
-            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".hotel"
             android:label="@string/Hotels"
