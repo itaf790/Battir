@@ -34,10 +34,11 @@ public class ImagesListAdapter extends ArrayAdapter<ImageUploadInfo> {
         String imageName = getItem(position).getImageName();
         String imageUrl1 = getItem(position).getImageURL1();
         final String imageUrl2 = getItem(position).getImageURL2();
+        final String imageUrl3 = getItem(position).getImageURL3();
 
         //Create the employee object with the information
         ImageUploadInfo ImageInfo = new ImageUploadInfo(imageDesc,imageName,
-                                                        imageUrl1,imageUrl2);
+                                                        imageUrl1,imageUrl2,imageUrl3);
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(this.mResource, parent,false);
 

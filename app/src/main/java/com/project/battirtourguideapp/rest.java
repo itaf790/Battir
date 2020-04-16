@@ -5,8 +5,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -85,6 +91,63 @@ public class rest extends AppCompatActivity {
 
             }
         });
+    }
+
+
+///// menu
+
+
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.rest_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+
+
+
+
+
+        switch (item.getItemId()) {
+
+            case R.id.khirbeh: {
+                startActivity(new Intent(getApplicationContext(),
+                        khirbeh_menu.class));
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+
+            }
+            break;
+
+
+            case R.id.terrace: {
+                startActivity(new Intent(getApplicationContext(),
+                        terrace_menu.class));
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+            }
+            break;
+
+
+            case R.id.ain_jami: {
+                startActivity(new Intent(getApplicationContext(),
+                        ain_jami_menu.class));
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+            }
+            break;
+
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return false;
     }
     }
 

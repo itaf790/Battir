@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.project.battirtourguideapp">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -22,7 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".khirbeh_menu"
+            android:parentActivityName=".rest"
+            android:label="Al-Khirbeh Rest Area Menu"></activity>
+        <activity android:name=".terrace_menu"
+            android:parentActivityName=".rest"
+            android:label="The Terrace's Cafe Menu"
+            />
+        <activity android:name=".ain_jami_menu"
+            android:parentActivityName=".rest"
+            android:label="Ain Jami Reastaurant Menu"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,16 +41,18 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCpsOhVivNGvfR0sNzEkvHPUt67ZU6hdpQ"
-            />
+            android:value="AIzaSyCpsOhVivNGvfR0sNzEkvHPUt67ZU6hdpQ" />
 
         <activity
             android:name=".map"
             android:label="@string/title_activity_map"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".ImageDetailsActivity"
-            android:parentActivityName=".resrR1descripion" />
+            android:parentActivityName=".resrR1descripion"
+            android:label="Description"
+            />
         <activity
             android:name=".resrR1descripion"
             android:parentActivityName=".MainActivity" />
