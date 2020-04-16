@@ -110,10 +110,6 @@ public class rest extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
 
-
-
-
-
         switch (item.getItemId()) {
 
             case R.id.khirbeh: {
