@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+        <group
+            android:checkableBehavior="single"
+            android:icon="@drawable/ic_restaurant_black_24dp">
+            <item android:id="@+id/khirbeh"
+                android:title="Al-khirbeh Rest Area Menu"
+                />
+            <item android:id="@+id/ain_jami"
+                android:title="Ain Jami Restaurant Menu" />
+            <item android:id="@+id/terrace"
+                android:title="‎The Terrace's Cafe al Jenan Menu" />
+        </group>
+    </menu>
+
+
