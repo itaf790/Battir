@@ -21,16 +21,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".khirbeh_menu"
-            android:parentActivityName=".rest"
-            android:label="Al-Khirbeh Rest Area Menu"></activity>
-        <activity android:name=".terrace_menu"
-            android:parentActivityName=".rest"
-            android:label="The Terrace's Cafe Menu"
-            />
-        <activity android:name=".ain_jami_menu"
-            android:parentActivityName=".rest"
-            android:label="Ain Jami Reastaurant Menu"/>
+        <activity android:name=".generateQrcode"></activity>
+        <activity
+            android:name=".khirbeh_menu"
+            android:label="Al-Khirbeh Rest Area Menu"
+            android:parentActivityName=".rest" />
+        <activity
+            android:name=".terrace_menu"
+            android:label="The Terrace&apos;s Cafe Menu"
+            android:parentActivityName=".rest" />
+        <activity
+            android:name=".ain_jami_menu"
+            android:label="Ain Jami Reastaurant Menu"
+            android:parentActivityName=".rest" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,13 +49,11 @@
         <activity
             android:name=".map"
             android:label="@string/title_activity_map"
-            android:parentActivityName=".MainActivity"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ImageDetailsActivity"
-            android:parentActivityName=".resrR1descripion"
             android:label="Description"
-            />
+            android:parentActivityName=".resrR1descripion" />
         <activity
             android:name=".resrR1descripion"
             android:parentActivityName=".MainActivity" />

@@ -157,7 +157,8 @@ public class MainActivity extends AppCompatActivity
                     item.setChecked (true);
                     break;
                 case R.id.navigation_qr:
-                    //Check the Item
+                    startActivity (new Intent (getApplicationContext (),
+                            generateQrcode.class));
 
                     item.setChecked (true);
                     break;
