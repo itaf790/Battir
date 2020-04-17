@@ -168,4 +168,4 @@ public class generateQrcode extends AppCompatActivity {
 
     }
 }
-//hiiii
+//5ra
