@@ -21,7 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".generateQrcode"></activity>
+        <activity android:name=".Generate_qr_code" />
+        <activity
+            android:name=".generateQrcode"
+            android:label="QR Code Scanner"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".khirbeh_menu"
             android:label="Al-Khirbeh Rest Area Menu"
