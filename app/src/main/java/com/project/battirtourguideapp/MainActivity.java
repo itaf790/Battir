@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity
                     break;
                 case R.id.navigation_map:
                     startActivity (new Intent (getApplicationContext (),
-                            map.class));
+                            MapsActivity.class));
                     overridePendingTransition (0, 0);
                     return true;
 
