@@ -33,12 +33,16 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBEL2oKLt6SRK5e-BJLkoJqYFTVNlfbPL4" />
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:parentActivityName=".MainActivity"></activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-
 
         <activity android:name=".Generate_qr_code" />
         <activity
@@ -49,13 +53,6 @@
             android:name=".khirbeh_menu"
             android:label="Al-Khirbeh Rest Area Menu"
             android:parentActivityName=".rest" />
-
-        <activity
-            android:name=".MapsActivity"
-            android:label="Map"
-            android:parentActivityName=".MainActivity" />
-
-
         <activity
             android:name=".terrace_menu"
             android:label="The Terrace&apos;s Cafe Menu"

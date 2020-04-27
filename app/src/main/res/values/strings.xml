@@ -12,5 +12,6 @@
     <string name="battir_village">Battir village</string>
     <string name="loading">Loading...</string>
     <string name="name">name</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
